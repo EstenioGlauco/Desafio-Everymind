@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nunes Sports - Editar Produto</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Editar Produto</h2>
+    <form action="/edit/{{ product.id }}" method="post">
+        <label for="name">Nome:</label>
+        <input type="text" name="name" value="{{ product.name }}" required><br>
+        <label for="code">Código:</label>
+        <input type="text" name="code" value="{{ product.code }}" required><br>
+        <label for="description">Descrição:</label>
+        <input type="text" name="description" value="{{ product.description }}"><br>
+        <label for="price">Preço:</label>
+        <input type="text" name="price" value="{{ product.price }}" required><br>
+        <input type="submit" value="Salvar Alterações">
+    </form>
+</body>
+</html>
